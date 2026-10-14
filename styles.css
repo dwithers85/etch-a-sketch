@@ -1,0 +1,20 @@
+.flex-container {
+    display: flex;
+    width:320px;
+    height:320px;
+    flex-direction:column;
+    /* background-color: aqua;    */
+}
+
+.flex-row {
+    display: flex;
+    /* background-color: blue; */
+    flex:1;
+    width:auto;
+    height:auto;
+}
+
+.flex-item {
+    flex: 1;
+    /* background-color:blueviolet; */
+}
