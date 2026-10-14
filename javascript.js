@@ -19,7 +19,14 @@ function createGrid(gridSize){
     sketchpadContainer.replaceChildren();
     //add event listener that changes background color
     sketchpadContainer.addEventListener("mouseover", function(e){
-    e.target.style.backgroundColor = getRandomRGB();
+        e.stopPropagation();
+        e.target.style.backgroundColor = "black";     
+    // e.target.style.backgroundColor = getRandomRGB();
+    let pixelOpacity = +e.target.style.opacity + 0.1;
+
+    console.log(pixelOpacity);
+    e.target.style.opacity = pixelOpacity;
+    // console.log(e.target.style.opacity);
     });
 
     //Add rows
