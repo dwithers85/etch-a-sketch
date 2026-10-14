@@ -19,7 +19,7 @@ function createGrid(gridSize){
     sketchpadContainer.replaceChildren();
     //add event listener that changes background color
     sketchpadContainer.addEventListener("mouseover", function(e){
-    e.target.style.backgroundColor = "blue";
+    e.target.style.backgroundColor = getRandomRGB();
     });
 
     //Add rows
@@ -40,3 +40,11 @@ function createGrid(gridSize){
     }//loop to create rows
     addEventListener
 }//createGrid
+
+function getRandomRGB(){
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
